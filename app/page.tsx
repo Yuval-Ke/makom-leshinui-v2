@@ -113,11 +113,11 @@ export default function HomePage() {
       </section>
 
       {/* מצבים header */}
-      <section className="py-8 md:py-10 text-center px-6" style={{ backgroundColor: "#F7F4EE" }} aria-labelledby="conditions">
-        <h2 id="conditions" className="text-xl md:text-2xl font-bold mb-4" style={{ color: "#1B3A5C" }}>
+      <section className="py-10 md:py-14 text-center px-6" style={{ backgroundColor: "#1B3A5C" }} aria-labelledby="conditions">
+        <h2 id="conditions" className="text-xl md:text-2xl font-bold mb-4 text-white">
           מצבים בהם ניתן לטפל בהיפנוזה
         </h2>
-        <p className="text-xs md:text-sm text-muted-fg max-w-2xl mx-auto leading-relaxed">
+        <p className="text-xs md:text-sm max-w-2xl mx-auto leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>
           רשימת דוגמאות חלקית של מצבים רפואיים ונפשיים בהם ניתן לטפל בהצלחה באמצעות היפנוזה.
           בסוגריים – מצויינים מאמרים מדעיים עליהם הסתמכתי (ניתן לעיין בהם ברשת).
           למעמיקים מומלץ לקרוא את הספר &quot;היפנוזה- דרכה של הנפש ליצור את הגוף&quot;, מאת אודי בונשטיין,
@@ -131,25 +131,29 @@ export default function HomePage() {
           key={condition.title}
           className={`flex flex-col md:flex-row ${i % 2 === 0 ? "" : "md:flex-row-reverse"}`}
         >
-          <div
-            className="w-full md:w-1/2 px-6 py-6 md:px-10 md:py-8 flex flex-col justify-center"
-            style={{ backgroundColor: i % 2 === 0 ? "#FFFFFF" : "#F7F4EE" }}
-          >
-            <h3 className="text-base md:text-lg font-bold mb-3" style={{ color: "#1B3A5C" }}>{condition.title}</h3>
-            <p className="text-xs md:text-sm text-muted-fg leading-relaxed">{condition.content}</p>
-          </div>
-          {condition.image ? (
+          {/* Image — visible on mobile too, stacked on top */}
+          {condition.image && (
             <div
-              className="hidden md:block md:w-1/2 min-h-56"
+              className="w-full md:w-1/2"
               style={{
                 backgroundImage: `url(${condition.image})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
+                minHeight: "220px",
               }}
             />
-          ) : (
+          )}
+          {!condition.image && (
             <div className="hidden md:block md:w-1/2" style={{ backgroundColor: "#EDF2F8" }} />
           )}
+          <div
+            className="w-full md:w-1/2 px-6 py-7 md:px-12 md:py-10 flex flex-col justify-center"
+            style={{ backgroundColor: i % 2 === 0 ? "#FFFFFF" : "#F7F4EE" }}
+          >
+            <div className="w-8 h-0.5 mb-4" style={{ backgroundColor: "#1B3A5C" }} />
+            <h3 className="text-lg md:text-xl font-bold mb-3" style={{ color: "#1B3A5C" }}>{condition.title}</h3>
+            <p className="text-xs md:text-sm text-muted-fg leading-relaxed">{condition.content}</p>
+          </div>
         </div>
       ))}
 

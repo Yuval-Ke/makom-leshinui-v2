@@ -7,7 +7,7 @@ export default function HeroSection() {
       style={{ backgroundColor: "#1B3A5C" }}
       aria-label="כותרת ראשית"
     >
-      <Logo size={160} />
+      <Logo size={240} />
     </section>
   );
 }

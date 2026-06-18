@@ -28,13 +28,13 @@ export default function TherapistPage() {
           <div className="flex-shrink-0 flex justify-center w-full md:w-auto">
             <div
               className="overflow-hidden rounded-xl border border-border"
-              style={{ width: "220px", height: "280px" }}
+              style={{ width: "300px", height: "400px" }}
             >
               <Image
                 src="/Pictures/Therapist.jpg"
                 alt="יובל — מטפל בהיפנוזה"
-                width={220}
-                height={280}
+                width={300}
+                height={400}
                 className="w-full h-full object-cover object-top"
               />
             </div>
