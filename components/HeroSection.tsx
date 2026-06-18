@@ -1,29 +1,39 @@
 import Image from "next/image";
-import Logo from "./Logo";
 
 export default function HeroSection() {
   return (
-    <section className="relative border-b border-border overflow-hidden" aria-label="כותרת ראשית">
-      {/* Background image */}
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src="/Pictures/background.jpg"
-          alt=""
-          fill
-          className="object-cover"
-          priority
-          quality={85}
-        />
-        {/* Soft white overlay so text stays readable */}
-        <div className="absolute inset-0 bg-white/75" />
-      </div>
-
-      <div className="py-20 md:py-28 max-w-2xl mx-auto px-6 md:px-8 text-center">
-        <div className="flex justify-center mb-8">
-          <Logo size={110} />
-        </div>
-        <p className="text-base md:text-lg text-muted-fg leading-relaxed max-w-sm mx-auto">
-          גישה מקצועית ומבוססת מחקר לטיפול בהיפנוזה
+    <section className="relative w-full overflow-hidden" style={{ minHeight: "70vh" }} aria-label="כותרת ראשית">
+      <Image
+        src="/Pictures/background.jpg"
+        alt="רקע"
+        fill
+        priority
+        className="object-cover"
+        sizes="100vw"
+        quality={85}
+      />
+      <div className="absolute inset-0" style={{ backgroundColor: "rgba(27,58,92,0.58)" }} />
+      <div
+        className="relative z-10 flex flex-col items-center justify-center text-center px-6"
+        style={{ minHeight: "70vh" }}
+      >
+        <h1
+          className="text-white font-bold leading-tight mb-4"
+          style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
+        >
+          מקום לשינוי
+        </h1>
+        <p
+          className="text-white/85 font-medium mb-4"
+          style={{ fontSize: "clamp(1rem, 2.5vw, 1.4rem)" }}
+        >
+          מרפאה להיפנוזה
+        </p>
+        <p
+          className="text-white/70 max-w-lg leading-relaxed"
+          style={{ fontSize: "clamp(0.85rem, 1.8vw, 1rem)" }}
+        >
+          היפנוזה לטיפול בכאב, חרדה, הפרעות שינה ועוד
         </p>
       </div>
     </section>

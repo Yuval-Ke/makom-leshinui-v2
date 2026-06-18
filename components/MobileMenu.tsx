@@ -33,12 +33,13 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       aria-label="תפריט ניווט"
     >
       <div
-        className="absolute top-0 right-0 h-full w-72 bg-bg border-l border-border flex flex-col pt-6 px-8"
+        className="absolute top-0 right-0 h-full w-72 flex flex-col pt-6 px-8"
+        style={{ backgroundColor: "#1B3A5C" }}
         onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={onClose}
-          className="self-start mb-10 p-1 -mr-1 text-muted-fg hover:text-fg transition-colors"
+          className="self-start mb-10 p-1 -mr-1 text-white/70 hover:text-white transition-colors"
           aria-label="סגור תפריט"
         >
           <X size={22} />
@@ -50,7 +51,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 <Link
                   href={item.href}
                   onClick={onClose}
-                  className="block py-3 text-lg font-medium text-fg hover:text-stone transition-colors border-b border-border"
+                  className="block py-3 text-lg font-medium text-white/80 hover:text-white transition-colors border-b border-white/20"
                 >
                   {item.label}
                 </Link>

@@ -8,17 +8,20 @@
   --color-border: #E4E4E7;
   --color-stone: #B5956A;
   --color-stone-light: #F5EFE6;
+  --color-navy: #1B3A5C;
+  --color-navy-mid: #2D5F9E;
+  --color-navy-light: #EDF2F8;
   --font-sans: var(--font-inter);
 }
 
 html {
   scroll-behavior: smooth;
-  font-size: 24px; /* mobile: 1.5x */
+  font-size: 24px;
 }
 
 @media (min-width: 768px) {
   html {
-    font-size: 16px; /* desktop: normal */
+    font-size: 16px;
   }
 }
 
@@ -27,7 +30,6 @@ body {
   color: #09090B;
 }
 
-/* Scroll animation */
 .fade-up {
   opacity: 0;
   transform: translateY(20px);

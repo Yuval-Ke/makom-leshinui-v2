@@ -17,12 +17,12 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 bg-bg/95 backdrop-blur-sm border-b border-border">
+    <header className="sticky top-0 z-40" style={{ backgroundColor: "#1B3A5C" }}>
       {/* Mobile */}
       <div className="md:hidden flex items-center h-14 px-4 relative">
         <button
           onClick={() => setMenuOpen(true)}
-          className="p-2 -ml-2 text-muted-fg hover:text-fg transition-colors"
+          className="p-2 -ml-2 text-white/70 hover:text-white transition-colors"
           aria-label="פתח תפריט"
           aria-expanded={menuOpen}
         >
@@ -36,14 +36,14 @@ export default function Header() {
       </div>
 
       {/* Desktop */}
-      <div className="hidden md:flex items-center justify-between max-w-3xl mx-auto px-8 h-16">
+      <div className="hidden md:flex items-center justify-between max-w-5xl mx-auto px-8 h-16">
         <nav>
           <ul className="flex items-center gap-7">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="text-sm font-medium text-muted-fg hover:text-fg transition-colors"
+                  className="text-sm font-medium text-white/80 hover:text-white transition-colors"
                 >
                   {item.label}
                 </Link>
