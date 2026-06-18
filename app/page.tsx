@@ -4,6 +4,7 @@ import ContactBlock from "@/components/ContactBlock";
 interface ConditionItem {
   title: string;
   content: string;
+  image?: string;
 }
 
 const conditions: ConditionItem[] = [
@@ -11,36 +12,43 @@ const conditions: ConditionItem[] = [
     title: "טיפול בכאב",
     content:
       "כאב הוא תופעה פיזיולוגית שנועדה להתריע ולהזהיר את האדם כדי שישנה את התנהגותו בכדי שלא יחמיר את המצב. למשל – אדם ששבר את היד, ימנע מלהזיז אותה בשל הכאב ובכך ימנע נזק גדול יותר. נעשה שימוש בהיפנוזה לטיפול בכאב אקוטי וכרוני. מחקרים מראים שהיפנוזה יעילה לכאבי גב תחתון (Crasilneck 2011) ולכמעט כל תסמונות הכאב (Patterson & Jensen. 2003).",
+    image: "/Pictures/pain.jpg",
   },
   {
     title: "פיברומיאלגיה",
     content:
       "פיברומיאלגיה היא מחלה כרונית המאופיינת בכאבים מוסקולוסקלטליים מפושטים, מלווים בעייפות, תלונות סומטיות מרובות, ומקושרת לדיכאון. הטיפול הוא מולטידיסיפלינרי וכולל טיפול תרופתי, פסיכולוגי, שיקומי ופיזיותרפיה. מחקרים מצאו שהיפנוזה שיפרה כאבי שרירים, תשישות, הפרעות שינה ותחושה כללית בחולי פיברומיאלגיה (Haanen et al., 1991).",
+    image: "/Pictures/fibromyalgia.jpg",
   },
   {
     title: "מיגרנות וכאבי ראש",
     content:
       "כאבי ראש שכיחים מאוד באוכלוסיה. חלק מהגורמים המעוררים כאבי ראש הם לחץ, מחסור בשינה, שינוי בהרגלי אכילה, חרדה ועוד. מחקרים הראו שטיפול בהיפנוזה גרם להפחתה בתדירות ההתקפים, בעצמתם ובשימוש בתרופות (Friedman and Taub 1984).",
+    image: "/Pictures/headache.jpg",
   },
   {
     title: "הפסקת עישון",
     content:
       "לעישון יש השלכות בריאותיות רבות וביניהן עליה לסיכון בסרטן ריאות, COPD ופגיעה באיכות החיים. לנסיון להפסיק לעשן ללא תמיכה ראויה סיכויי הצלחה מועטים. הטיפול בהיפנוזה, במקביל או ללא טיפול תרופתי, מעלה מוטיבציה, עוזר בטיפול בהתנגדויות ומעלה סיכויי הצלחה.",
+    image: "/Pictures/SMOKING.jpg",
   },
   {
     title: "הפרעות שינה",
     content:
       "הפרעות שינה כוללות נדודי שינה (אינסומניה), ביעותי לילה, סונמבוליזם והרטבת לילה (בילדים לרוב) ועוד. הפרעות השינה פוגעות בתפקוד הנורמלי וגורמות סבל רב. להיפנוזה ולשיטות הרגעות יש תועלת רבה בטיפול בהפרעות שינה מסוגים שונים (Becker. 2015), והטיפול משלב לימוד היגיינת שינה והיפנוזה עצמית.",
+    image: "/Pictures/SLEEPING DISORDERS.jpg",
   },
   {
     title: "הפרעות עיכול",
     content:
       "היפנוזה מועילה למגוון הפרעות עיכול כגון IBS (תסמונת המעי הרגיז). התסמונת מתבטאת בתבנית אבנורמלית של שילשול, עצירות, או שילוב ביניהן. ההיפנוזה משפיעה על החלקים במוח שאחראים על תנועת המעי ועל תחושת הכאב. מחקרים הראו אפקטיביות רבה בטיפול בהיפנוזה בתסמונת המעי הרגיז (Whorwell 1987).",
+    image: "/Pictures/GI.jpg",
   },
   {
     title: "הריון ולידה",
     content:
       "הריון ולידה הן אחת החוויות המרגשות והעוצמתיות ביותר, אך לעיתים נלוות גם חרדה ודאגה מפני הכאב הכרוך בלידה. מחקרים מראים כי שימוש בהיפנוזה מגביר את הביטחון העצמי והרוגע של היולדת, מעלה שיעור לידות ספונטניות ומצמצם שכיחות דיכאון לאחר לידה (Harmon, Hynan and Tyre, 1990).",
+    image: "/Pictures/PREGNANCY.jpg",
   },
   {
     title: "חרדה",
@@ -51,17 +59,14 @@ const conditions: ConditionItem[] = [
     title: "סרטן",
     content:
       "מחלת הסרטן והטיפול בה הופכים נפוצים יותר ויותר. היפנוזה יעילה ביותר בהתמודדות עם תופעות לוואי של כימותרפיה כגון גלי חום אצל נשים שחלו בסרטן שד, בחילות והקאות בילדים ועוד (Jacknow, Tschann & Boyce, 1994). הטיפול בהיפנוזה מועיל לטיפול בחרדה ובסטרס שמתלווים למחלה (Chen, Liu, Chen, 2017) ומחזק את יכולת ההתמודדות.",
+    image: "/Pictures/cancer.jpg",
   },
   {
     title: "היפנוזה בילדים",
     content:
       "ילדים מגיבים לטיפול היפנוטי אפילו טוב יותר ממבוגרים ועל כן קיימים טיפולים היפנוטיים לבעיות נפוצות — הרטבת לילה ראשונית (Enuresis), העלמת נגעים בעור – ורוקה ואקזמות, חרדה מפני מחטים וזריקות, סיוטי לילה ועוד.",
+    image: "/Pictures/CHILDREN.jpg",
   },
-];
-
-const accentBg = [
-  "#EDF2F8", "#F5EFE6", "#EDF5F0", "#F5F0ED", "#EDF2F8",
-  "#F5EFE6", "#EDF5F0", "#F5F0ED", "#EDF2F8", "#F5EFE6",
 ];
 
 export default function HomePage() {
@@ -126,13 +131,24 @@ export default function HomePage() {
           className={`flex flex-col md:flex-row ${i % 2 === 0 ? "" : "md:flex-row-reverse"}`}
         >
           <div
-            className="w-full md:w-1/2 px-6 py-6 md:px-10 md:py-8"
+            className="w-full md:w-1/2 px-6 py-6 md:px-10 md:py-8 flex flex-col justify-center"
             style={{ backgroundColor: i % 2 === 0 ? "#FFFFFF" : "#F7F4EE" }}
           >
             <h3 className="text-base md:text-lg font-bold mb-3" style={{ color: "#1B3A5C" }}>{condition.title}</h3>
             <p className="text-xs md:text-sm text-muted-fg leading-relaxed">{condition.content}</p>
           </div>
-          <div className="hidden md:block md:w-1/2" style={{ backgroundColor: accentBg[i] }} />
+          {condition.image ? (
+            <div
+              className="hidden md:block md:w-1/2 min-h-56"
+              style={{
+                backgroundImage: `url(${condition.image})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            />
+          ) : (
+            <div className="hidden md:block md:w-1/2" style={{ backgroundColor: "#EDF2F8" }} />
+          )}
         </div>
       ))}
 
