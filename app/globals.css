@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #FFFFFF;
+  --color-fg: #09090B;
+  --color-muted: #F4F4F5;
+  --color-muted-fg: #71717A;
+  --color-border: #E4E4E7;
+  --color-stone: #B5956A;
+  --color-stone-light: #F5EFE6;
+  --font-sans: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 24px; /* mobile: 1.5x */
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px; /* desktop: normal */
+  }
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #09090B;
+}
+
+/* Scroll animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
