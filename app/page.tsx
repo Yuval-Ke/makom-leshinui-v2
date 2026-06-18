@@ -95,13 +95,7 @@ export default function HomePage() {
               { title: "פגישות טיפוליות – בהן קורה הקסם", body: "במהלך הפגישה שאורכת 45 דק׳ תכנסו לטראנס היפנוטי ותתקיים העבודה הטיפולית. בסוף המפגש, נעבד את החוויה." },
               { title: "היפנוזה עצמית", body: "במהלך התהליך תלמדו לבצע היפנוזה עצמית שתשרת אתכם בעתיד ותתבקשו לתרגל זאת בבית." },
             ].map((item, i) => (
-              <div key={i} className="flex items-start gap-3">
-                <span
-                  className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center font-bold mt-0.5"
-                  style={{ backgroundColor: "#1B3A5C", color: "white", fontSize: "10px" }}
-                >
-                  {i + 1}
-                </span>
+              <div key={i} className="flex items-start">
                 <div className="flex-1">
                   <h3 className="text-sm md:text-base font-semibold mb-1" style={{ color: "#1B3A5C" }}>{item.title}</h3>
                   <p className="text-xs md:text-sm text-muted-fg leading-relaxed">{item.body}</p>
