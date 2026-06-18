@@ -37,7 +37,7 @@ export default function FAQPage() {
     <>
       <div
         className="flex items-center justify-center py-10 md:py-14"
-        style={{ backgroundColor: "#1B3A5C" }}
+        style={{ backgroundColor: "#F7F4EE" }}
       >
         <Logo size={140} />
       </div>

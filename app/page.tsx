@@ -113,11 +113,11 @@ export default function HomePage() {
       </section>
 
       {/* מצבים header */}
-      <section className="py-10 md:py-14 text-center px-6" style={{ backgroundColor: "#1B3A5C" }} aria-labelledby="conditions">
-        <h2 id="conditions" className="text-xl md:text-2xl font-bold mb-4 text-white">
+      <section className="py-10 md:py-14 text-center px-6" style={{ backgroundColor: "#F7F4EE" }} aria-labelledby="conditions">
+        <h2 id="conditions" className="text-xl md:text-2xl font-bold mb-4" style={{ color: "#1B3A5C" }}>
           מצבים בהם ניתן לטפל בהיפנוזה
         </h2>
-        <p className="text-xs md:text-sm max-w-2xl mx-auto leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>
+        <p className="text-xs md:text-sm max-w-2xl mx-auto leading-relaxed text-muted-fg">
           רשימת דוגמאות חלקית של מצבים רפואיים ונפשיים בהם ניתן לטפל בהצלחה באמצעות היפנוזה.
           בסוגריים – מצויינים מאמרים מדעיים עליהם הסתמכתי (ניתן לעיין בהם ברשת).
           למעמיקים מומלץ לקרוא את הספר &quot;היפנוזה- דרכה של הנפש ליצור את הגוף&quot;, מאת אודי בונשטיין,
@@ -139,19 +139,19 @@ export default function HomePage() {
                 backgroundImage: `url(${condition.image})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                minHeight: "220px",
+                minHeight: "300px",
               }}
             />
           )}
           {!condition.image && (
-            <div className="hidden md:block md:w-1/2" style={{ backgroundColor: "#EDF2F8" }} />
+            <div className="hidden md:block md:w-1/2" style={{ backgroundColor: "#EDF2F8", minHeight: "300px" }} />
           )}
           <div
-            className="w-full md:w-1/2 px-6 py-7 md:px-12 md:py-10 flex flex-col justify-center"
-            style={{ backgroundColor: i % 2 === 0 ? "#FFFFFF" : "#F7F4EE" }}
+            className="w-full md:w-1/2 px-8 py-10 md:px-14 md:py-14 flex flex-col justify-center"
+            style={{ backgroundColor: i % 2 === 0 ? "#FFFFFF" : "#F7F4EE", minHeight: "300px" }}
           >
             <div className="w-8 h-0.5 mb-4" style={{ backgroundColor: "#1B3A5C" }} />
-            <h3 className="text-lg md:text-xl font-bold mb-3" style={{ color: "#1B3A5C" }}>{condition.title}</h3>
+            <h3 className="text-lg md:text-xl font-bold mb-4" style={{ color: "#1B3A5C" }}>{condition.title}</h3>
             <p className="text-xs md:text-sm text-muted-fg leading-relaxed">{condition.content}</p>
           </div>
         </div>
@@ -160,15 +160,15 @@ export default function HomePage() {
       {/* צור קשר */}
       <section
         className="py-8 md:py-12"
-        style={{ backgroundColor: "#1B3A5C" }}
+        style={{ backgroundColor: "#F7F4EE" }}
         aria-labelledby="contact-home"
         id="contact"
       >
         <div className="max-w-2xl mx-auto px-6 md:px-8 text-center">
-          <h2 id="contact-home" className="text-xl md:text-2xl font-bold text-white mb-8">
+          <h2 id="contact-home" className="text-xl md:text-2xl font-bold mb-8" style={{ color: "#1B3A5C" }}>
             צור קשר
           </h2>
-          <ContactBlock dark />
+          <ContactBlock />
         </div>
       </section>
     </>
