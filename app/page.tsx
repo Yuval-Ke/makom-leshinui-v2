@@ -84,9 +84,9 @@ export default function HomePage() {
       </section>
 
       {/* על התהליך */}
-      <section style={{ backgroundColor: "#1B3A5C" }} aria-labelledby="process">
+      <section style={{ backgroundColor: "#F7F4EE" }} aria-labelledby="process">
         <div className="max-w-2xl mx-auto px-8 py-10 md:px-14 md:py-14">
-          <h2 id="process" className="text-lg md:text-2xl font-bold text-white mb-8 text-center">
+          <h2 id="process" className="text-lg md:text-2xl font-bold mb-8 text-center" style={{ color: "#1B3A5C" }}>
             על התהליך הטיפולי
           </h2>
           <div className="space-y-6">
@@ -98,13 +98,13 @@ export default function HomePage() {
               <div key={i} className="flex items-start gap-3">
                 <span
                   className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center font-bold mt-0.5"
-                  style={{ backgroundColor: "rgba(255,255,255,0.2)", color: "white", fontSize: "10px" }}
+                  style={{ backgroundColor: "#1B3A5C", color: "white", fontSize: "10px" }}
                 >
                   {i + 1}
                 </span>
                 <div className="flex-1">
-                  <h3 className="text-sm md:text-base font-semibold text-white mb-1">{item.title}</h3>
-                  <p className="text-xs md:text-sm text-white/70 leading-relaxed">{item.body}</p>
+                  <h3 className="text-sm md:text-base font-semibold mb-1" style={{ color: "#1B3A5C" }}>{item.title}</h3>
+                  <p className="text-xs md:text-sm text-muted-fg leading-relaxed">{item.body}</p>
                 </div>
               </div>
             ))}
@@ -113,7 +113,7 @@ export default function HomePage() {
       </section>
 
       {/* מצבים header */}
-      <section className="py-8 md:py-10 bg-white text-center px-6" aria-labelledby="conditions">
+      <section className="py-8 md:py-10 text-center px-6" style={{ backgroundColor: "#F7F4EE" }} aria-labelledby="conditions">
         <h2 id="conditions" className="text-xl md:text-2xl font-bold mb-4" style={{ color: "#1B3A5C" }}>
           מצבים בהם ניתן לטפל בהיפנוזה
         </h2>
@@ -133,10 +133,10 @@ export default function HomePage() {
         >
           <div
             className="w-full md:w-1/2 px-6 py-6 md:px-10 md:py-8"
-            style={{ backgroundColor: "#1B3A5C" }}
+            style={{ backgroundColor: i % 2 === 0 ? "#FFFFFF" : "#F7F4EE" }}
           >
-            <h3 className="text-base md:text-lg font-bold text-white mb-3">{condition.title}</h3>
-            <p className="text-xs md:text-sm text-white/80 leading-relaxed">{condition.content}</p>
+            <h3 className="text-base md:text-lg font-bold mb-3" style={{ color: "#1B3A5C" }}>{condition.title}</h3>
+            <p className="text-xs md:text-sm text-muted-fg leading-relaxed">{condition.content}</p>
           </div>
           <div className="hidden md:block md:w-1/2" style={{ backgroundColor: accentBg[i] }} />
         </div>
