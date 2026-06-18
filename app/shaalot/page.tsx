@@ -1,7 +1,5 @@
-import PageContainer from "@/components/PageContainer";
-import SectionTitle from "@/components/SectionTitle";
+import Logo from "@/components/Logo";
 import AccordionGroup, { AccordionItem } from "@/components/AccordionGroup";
-import FadeIn from "@/components/FadeIn";
 
 export const metadata = {
   title: "שאלות ותשובות — מקום לשינוי",
@@ -36,15 +34,23 @@ const faqs: AccordionItem[] = [
 
 export default function FAQPage() {
   return (
-    <div className="py-16 md:py-24">
-      <PageContainer>
-        <FadeIn>
-          <SectionTitle as="h1">שאלות נפוצות</SectionTitle>
-        </FadeIn>
-        <FadeIn delay={80}>
-          <AccordionGroup items={faqs} />
-        </FadeIn>
-      </PageContainer>
-    </div>
+    <>
+      <div
+        className="flex items-center justify-center py-10 md:py-14"
+        style={{ backgroundColor: "#1B3A5C" }}
+      >
+        <Logo size={140} />
+      </div>
+
+      <div className="py-8 md:py-12 px-5 md:px-8 max-w-2xl mx-auto">
+        <h1
+          className="text-xl md:text-2xl font-bold mb-8 text-center"
+          style={{ color: "#1B3A5C" }}
+        >
+          שאלות נפוצות
+        </h1>
+        <AccordionGroup items={faqs} />
+      </div>
+    </>
   );
 }

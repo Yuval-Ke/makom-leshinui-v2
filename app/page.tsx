@@ -85,40 +85,29 @@ export default function HomePage() {
 
       {/* על התהליך */}
       <section style={{ backgroundColor: "#1B3A5C" }} aria-labelledby="process">
-        <div className="flex flex-col md:flex-row">
-          <div
-            className="w-full md:w-1/2"
-            style={{
-              backgroundImage: "url('/Pictures/Therapist.jpg')",
-              backgroundSize: "cover",
-              backgroundPosition: "center top",
-              minHeight: "360px",
-            }}
-          />
-          <div className="w-full md:w-1/2 px-8 py-8 md:px-14 md:py-10">
-            <h2 id="process" className="text-lg md:text-2xl font-bold text-white mb-8">
-              על התהליך הטיפולי
-            </h2>
-            <div className="space-y-7">
-              {[
-                { title: "מפגש היכרות", body: "בו מעמיקים בבעיה בשלה הגעתם לטיפול. מקבלים הסבר מעמיק ומתנסים התנסות קצרה." },
-                { title: "פגישות טיפוליות – בהן קורה הקסם", body: "במהלך הפגישה שאורכת 45 דק׳ תכנסו לטראנס היפנוטי ותתקיים העבודה הטיפולית. בסוף המפגש, נעבד את החוויה." },
-                { title: "היפנוזה עצמית", body: "במהלך התהליך תלמדו לבצע היפנוזה עצמית שתשרת אתכם בעתיד ותתבקשו לתרגל זאת בבית." },
-              ].map((item, i) => (
-                <div key={i} className="flex gap-4">
-                  <span
-                    className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mt-1"
-                    style={{ backgroundColor: "rgba(255,255,255,0.2)", color: "white" }}
-                  >
-                    {i + 1}
-                  </span>
-                  <div>
-                    <h3 className="text-sm md:text-base font-semibold text-white mb-1">{item.title}</h3>
-                    <p className="text-xs md:text-sm text-white/70 leading-relaxed">{item.body}</p>
-                  </div>
+        <div className="max-w-2xl mx-auto px-8 py-10 md:px-14 md:py-14">
+          <h2 id="process" className="text-lg md:text-2xl font-bold text-white mb-8 text-center">
+            על התהליך הטיפולי
+          </h2>
+          <div className="space-y-6">
+            {[
+              { title: "מפגש היכרות", body: "בו מעמיקים בבעיה בשלה הגעתם לטיפול. מקבלים הסבר מעמיק ומתנסים התנסות קצרה." },
+              { title: "פגישות טיפוליות – בהן קורה הקסם", body: "במהלך הפגישה שאורכת 45 דק׳ תכנסו לטראנס היפנוטי ותתקיים העבודה הטיפולית. בסוף המפגש, נעבד את החוויה." },
+              { title: "היפנוזה עצמית", body: "במהלך התהליך תלמדו לבצע היפנוזה עצמית שתשרת אתכם בעתיד ותתבקשו לתרגל זאת בבית." },
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-3">
+                <span
+                  className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center font-bold mt-0.5"
+                  style={{ backgroundColor: "rgba(255,255,255,0.2)", color: "white", fontSize: "10px" }}
+                >
+                  {i + 1}
+                </span>
+                <div className="flex-1">
+                  <h3 className="text-sm md:text-base font-semibold text-white mb-1">{item.title}</h3>
+                  <p className="text-xs md:text-sm text-white/70 leading-relaxed">{item.body}</p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -1,10 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import { Menu } from "lucide-react";
-import Logo from "./Logo";
-import MobileMenu from "./MobileMenu";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { href: "/", label: "על הטיפול" },
@@ -14,49 +11,34 @@ const navItems = [
 ];
 
 export default function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-40" style={{ backgroundColor: "#1B3A5C" }}>
-      {/* Mobile */}
-      <div className="md:hidden flex items-center h-14 px-4 relative">
-        <button
-          onClick={() => setMenuOpen(true)}
-          className="p-2 -ml-2 text-white/70 hover:text-white transition-colors"
-          aria-label="פתח תפריט"
-          aria-expanded={menuOpen}
-        >
-          <Menu size={22} />
-        </button>
-        <div className="absolute left-1/2 -translate-x-1/2">
-          <Link href="/" aria-label="עמוד הבית">
-            <Logo size={56} />
-          </Link>
-        </div>
-      </div>
-
-      {/* Desktop */}
-      <div className="hidden md:flex items-center justify-between max-w-5xl mx-auto px-8 h-16">
+      <div className="flex items-center justify-center h-12 px-4 md:h-14">
         <nav>
-          <ul className="flex items-center gap-7">
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="text-sm font-medium text-white/80 hover:text-white transition-colors"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+          <ul className="flex items-center gap-4 md:gap-8 flex-wrap justify-center">
+            {navItems.map((item) => {
+              const active = pathname === item.href;
+              return (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-xs md:text-sm font-medium transition-colors"
+                    style={{
+                      color: active ? "#ffffff" : "rgba(255,255,255,0.7)",
+                      borderBottom: active ? "2px solid rgba(255,255,255,0.7)" : "2px solid transparent",
+                      paddingBottom: "2px",
+                    }}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
-        <Link href="/" aria-label="עמוד הבית">
-          <Logo size={60} />
-        </Link>
       </div>
-
-      <MobileMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
     </header>
   );
 }
