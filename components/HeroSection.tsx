@@ -1,38 +1,28 @@
-import Image from "next/image";
-
 export default function HeroSection() {
   return (
-    <section className="relative w-full overflow-hidden" style={{ minHeight: "70vh" }} aria-label="כותרת ראשית">
-      <Image
-        src="/Pictures/background.jpg"
-        alt="רקע"
-        fill
-        priority
-        className="object-cover"
-        sizes="100vw"
-        quality={85}
-      />
-      <div className="absolute inset-0" style={{ backgroundColor: "rgba(27,58,92,0.58)" }} />
+    <section
+      aria-label="כותרת ראשית"
+      style={{
+        backgroundImage: "url('/Pictures/background.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: "480px",
+      }}
+    >
       <div
-        className="relative z-10 flex flex-col items-center justify-center text-center px-6"
-        style={{ minHeight: "70vh" }}
+        className="flex flex-col items-center justify-center text-center px-6"
+        style={{
+          minHeight: "480px",
+          backgroundColor: "rgba(27,58,92,0.58)",
+        }}
       >
-        <h1
-          className="text-white font-bold leading-tight mb-4"
-          style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
-        >
+        <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-3">
           מקום לשינוי
         </h1>
-        <p
-          className="text-white/85 font-medium mb-4"
-          style={{ fontSize: "clamp(1rem, 2.5vw, 1.4rem)" }}
-        >
+        <p className="text-base md:text-xl text-white/85 font-medium mb-4">
           מרפאה להיפנוזה
         </p>
-        <p
-          className="text-white/70 max-w-lg leading-relaxed"
-          style={{ fontSize: "clamp(0.85rem, 1.8vw, 1rem)" }}
-        >
+        <p className="text-sm md:text-base text-white/70 max-w-md leading-relaxed">
           היפנוזה לטיפול בכאב, חרדה, הפרעות שינה ועוד
         </p>
       </div>
