@@ -9,10 +9,10 @@ Branch: `p1-lovable-migration`. נקודת חזרה: tag `v1-nextjs-old` על `f
 | P1.1 | מחיקת אתר ה-Next הישן | `git ls-files` = `.gitignore`, `AGENTS.md`, `CLAUDE.md`, `netlify.toml`, `docs/*` | ✅ |
 | P1.2 | העתקת ה-export כמו שהוא | `diff -r` מול ה-export ריק (על `src`, `public` וקבצי השורש שהועתקו) | ✅ |
 | P1.3 | תלויות | גרסאות ישירות = `bun.lock`; אין nitro; אין `bun.lock`/`bunfig.toml`; `src` לא השתנה | ✅ |
-| P1.4 | תמונות מקומיות | אין `__l5e` ב-`src`; רק שורת `url` השתנתה ב-13 קבצי JSON; גודל ואותיות השם תואמים | ⏳ |
-| P1.5 | בנייה סטטית ו-`netlify.toml` | `npm run build` = 0; 5 קבצי HTML, favicon, robots ו-13 תמונות ב-`dist/client`; אין `.output`/`.netlify`/`.nitro` | ⏳ |
+| P1.4 | תמונות מקומיות | אין `__l5e` ב-`src`; רק שורת `url` השתנתה ב-13 קבצי JSON; גודל ואותיות השם תואמים | ✅ |
+| P1.5 | בנייה סטטית ו-`netlify.toml` | `npm run build` = 0; 5 קבצי HTML, favicon, robots ו-13 תמונות ב-`dist/client`; אין `.output`/`.netlify`/`.nitro` | ✅ |
 | P2.1 | סקריפט האימות וקו הבסיס | `npm run build && npm run verify` = 0 | ⏳ |
-| P2.2 | עמוד 404 | `dist/client/404.html` קיים; `verify` עדיין עובר | ⏳ |
+| P2.2 | עמוד 404 | `dist/client/404.html` קיים; `verify` עדיין עובר | ⛔ בוטל לפי התוכנית: מצב SPA מחליף את `index.html` של דף הבית. כתובת לא קיימת עדיין מחזירה 404 (עמוד ברירת המחדל של Netlify). ראו `pending-tasks.md` |
 | P2.3 | בדיקה ויזואלית ואינטראקציה | צילומי מסך ב-390 וב-1280 זהים לאתר החי (חוץ מהתגית); אינטראקציות עובדות; אין שגיאות | ⏳ |
 | P3.1 | תיעוד וניקיון | `check-ignore` תקין; אין אזכור ל-Next ב-`CLAUDE.md` וב-`AGENTS.md` | ⏳ |
 | P3.2 | פריסת טיוטה ב-Netlify | 5 עמודים = 200 (כולל `/about` בלי לוכסן); 404 לכתובת לא קיימת; התמונות נטענות | ⏳ |
