@@ -1,2 +1,5 @@
+# Keep LF everywhere (Netlify builds on Linux; prettier expects LF)
+* text=auto eol=lf
+
 # Byte-exact design baseline: never convert line endings
 scripts/baseline/** -text
