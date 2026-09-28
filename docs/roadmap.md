@@ -8,7 +8,7 @@ Branch: `p1-lovable-migration`. נקודת חזרה: tag `v1-nextjs-old` על `f
 | P0.1 | branch, tag, מסמכים | tag קיים; `spec.md`, `roadmap.md` ו-`pending-tasks.md` קיימים | ✅ |
 | P1.1 | מחיקת אתר ה-Next הישן | `git ls-files` = `.gitignore`, `AGENTS.md`, `CLAUDE.md`, `netlify.toml`, `docs/*` | ✅ |
 | P1.2 | העתקת ה-export כמו שהוא | `diff -r` מול ה-export ריק (על `src`, `public` וקבצי השורש שהועתקו) | ✅ |
-| P1.3 | תלויות | גרסאות ישירות = `bun.lock`; אין nitro; אין `bun.lock`/`bunfig.toml`; `src` לא השתנה | ⏳ |
+| P1.3 | תלויות | גרסאות ישירות = `bun.lock`; אין nitro; אין `bun.lock`/`bunfig.toml`; `src` לא השתנה | ✅ |
 | P1.4 | תמונות מקומיות | אין `__l5e` ב-`src`; רק שורת `url` השתנתה ב-13 קבצי JSON; גודל ואותיות השם תואמים | ⏳ |
 | P1.5 | בנייה סטטית ו-`netlify.toml` | `npm run build` = 0; 5 קבצי HTML, favicon, robots ו-13 תמונות ב-`dist/client`; אין `.output`/`.netlify`/`.nitro` | ⏳ |
 | P2.1 | סקריפט האימות וקו הבסיס | `npm run build && npm run verify` = 0 | ⏳ |
