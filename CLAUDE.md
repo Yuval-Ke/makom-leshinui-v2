@@ -1,20 +1,10 @@
 @AGENTS.md
 
-# Design Rules
+# Design freeze
 
-## DO
-- Light, minimal, clean, modern design — shadcn aesthetic
-- Neutral palette: whites, grays, one subtle warm stone accent color
-- Good typography hierarchy, plenty of whitespace
-- Font: Inter from Google Fonts
-- Mobile responsive, mobile-first
-- Light motion: scroll animations via IntersectionObserver, smooth transitions, subtle hover
+The site must stay identical to the Lovable original (https://mind-unwind-journey.lovable.app).
+Do not change the look, copy, or images unless the owner explicitly asks for it.
 
-## DON'T
-- NO bright saturated gradients or gradient text
-- NO emoji icons (use Lucide icons)
-- NO "revolutionary", "game-changing" marketing copy
-- NO heavy shadows or busy patterns
-- NO dark mode
-- NO border-radius > rounded-2xl
-- NO cramped spacing or tiny fonts (< 14px)
+- Before every commit, run `npm run build && npm run verify`. Both must pass.
+- If `verify` fails, fix the cause. Never change `src/` just to make the check pass.
+- Design intent is in `docs/design-brief.md`. Requirements are in `docs/spec.md`. Status is in `docs/roadmap.md`.
