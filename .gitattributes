@@ -1,0 +1,2 @@
+# Byte-exact design baseline: never convert line endings
+scripts/baseline/** -text
