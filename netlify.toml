@@ -4,3 +4,5 @@
 
 [build.environment]
   NODE_VERSION = "24"
+  # The site still has @netlify/plugin-nextjs installed from the old Next.js build; this tells it to do nothing.
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
