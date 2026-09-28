@@ -13,6 +13,7 @@ export default defineConfig({
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
-    prerender: { enabled: true },
+    // about.html (not about/index.html): Netlify then serves /about with 200 instead of a 301 to /about/.
+    prerender: { enabled: true, autoSubfolderIndex: false },
   },
 });

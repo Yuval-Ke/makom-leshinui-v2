@@ -33,10 +33,10 @@ const firstDiff = (a, b) => {
 
 const pages = {
   index: "index.html",
-  about: "about/index.html",
-  treatment: "treatment/index.html",
-  faq: "faq/index.html",
-  contact: "contact/index.html",
+  about: "about.html",
+  treatment: "treatment.html",
+  faq: "faq.html",
+  contact: "contact.html",
 };
 for (const [name, file] of Object.entries(pages)) {
   const live = norm(readFileSync(join(BASE, `${name}.html`), "utf8"));
