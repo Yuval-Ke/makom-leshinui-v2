@@ -3,24 +3,27 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/site/Reveal";
 import { PageHeader, SiteLayout } from "@/components/site/SiteLayout";
 import therapist from "@/assets/Therapist.jpg.asset.json";
+import { SITE_URL } from "@/lib/site";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "על המטפל — ד\"ר יובל קיסרי | מקום לשינוי" },
+      { title: "על המטפל — רופא ומטפל בהיפנוזה בבנימינה | מקום לשינוי" },
       {
         name: "description",
         content:
-          "ד\"ר יובל קיסרי, רופא (MD) בבית חולים רמב\"ם, בעל רשיון לטיפול בהיפנוזה מטעם משרד הבריאות (39927).",
+          "רופא (MD) בבית חולים רמב\"ם, בעל רשיון לטיפול בהיפנוזה מטעם משרד הבריאות. מרפאה להיפנוזה בבנימינה, לתושבי פרדס חנה והסביבה.",
       },
-      { property: "og:title", content: "על המטפל — ד\"ר יובל קיסרי | מקום לשינוי" },
+      { property: "og:title", content: "על המטפל — רופא ומטפל בהיפנוזה | מקום לשינוי" },
       {
         property: "og:description",
         content: "רופא ומטפל בהיפנוזה בעל רשיון משרד הבריאות, מרפאה בבנימינה.",
       },
       { property: "og:type", content: "profile" },
+      { property: "og:url", content: `${SITE_URL}/about` },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: `${SITE_URL}/about` }],
   }),
   component: AboutPage,
 });

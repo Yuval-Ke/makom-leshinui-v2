@@ -3,20 +3,23 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 import { Reveal } from "@/components/site/Reveal";
 import { PageHeader, SiteLayout } from "@/components/site/SiteLayout";
+import { SITE_URL } from "@/lib/site";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "צרו קשר — מרפאה להיפנוזה | מקום לשינוי" },
+      { title: "צרו קשר — מרפאה להיפנוזה בבנימינה ופרדס חנה | מקום לשינוי" },
       {
         name: "description",
-        content: "לתיאום טיפול בהיפנוזה או להתייעצות: טלפון 052-6903605, דוא\"ל dr.yuval.kesary@gmail.com.",
+        content: "לתיאום טיפול בהיפנוזה או להתייעצות: טלפון 052-6903605. מרפאה להיפנוזה בבנימינה, לתושבי פרדס חנה והסביבה.",
       },
       { property: "og:title", content: "צרו קשר — מרפאה להיפנוזה | מקום לשינוי" },
-      { property: "og:description", content: "פרטי יצירת קשר עם המרפאה להיפנוזה." },
+      { property: "og:description", content: "פרטי יצירת קשר עם המרפאה להיפנוזה בבנימינה." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: `${SITE_URL}/contact` },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: `${SITE_URL}/contact` }],
   }),
   component: ContactPage,
 });
@@ -30,7 +33,7 @@ const items = [
     href: "mailto:dr.yuval.kesary@gmail.com",
     ltr: true,
   },
-  { icon: MapPin, label: "מיקום", value: "בנימינה", href: undefined, ltr: false },
+  { icon: MapPin, label: "מיקום", value: "בנימינה · פרדס חנה", href: undefined, ltr: false },
 ];
 
 function ContactPage() {

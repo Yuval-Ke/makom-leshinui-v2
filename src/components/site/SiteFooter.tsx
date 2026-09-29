@@ -25,7 +25,7 @@ export function SiteFooter() {
           </a>
           <span className="flex items-center gap-2 text-muted-foreground">
             <MapPin size={16} />
-            בנימינה
+            בנימינה · פרדס חנה
           </span>
         </div>
       </div>

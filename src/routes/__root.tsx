@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "מקום לשינוי — מרפאה להיפנוזה רפואית" },
-      { name: "description", content: "מרפאה להיפנוזה בהובלת ד\"ר יובל קיסרי, רופא בעל רשיון משרד הבריאות." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "מקום לשינוי — מרפאה להיפנוזה רפואית" },
-      { property: "og:description", content: "טיפול בהיפנוזה על ידי רופא בעל רשיון משרד הבריאות." },
+      { title: "היפנוזה בבנימינה ופרדס חנה | מקום לשינוי" },
+      { name: "description", content: "מרפאה להיפנוזה בבנימינה, לתושבי פרדס חנה והסביבה. טיפול בהיפנוזה על ידי רופא בעל רשיון משרד הבריאות." },
+      { property: "og:title", content: "היפנוזה בבנימינה ופרדס חנה | מקום לשינוי" },
+      { property: "og:description", content: "טיפול בהיפנוזה על ידי רופא בעל רשיון משרד הבריאות, בבנימינה ופרדס חנה." },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "מקום לשינוי" },
+      { property: "og:locale", content: "he_IL" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {

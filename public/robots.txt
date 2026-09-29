@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://makom-leshinui.netlify.app/sitemap.xml

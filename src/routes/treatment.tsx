@@ -13,15 +13,16 @@ import pregnancyImg from "@/assets/pregnancy.jpg.asset.json";
 import anxietyImg from "@/assets/anxiety.jpg.asset.json";
 import cancerImg from "@/assets/cancer.jpg.asset.json";
 import childrenImg from "@/assets/children.jpg.asset.json";
+import { SITE_URL } from "@/lib/site";
 
 export const Route = createFileRoute("/treatment")({
   head: () => ({
     meta: [
-      { title: "על הטיפול בהיפנוזה — מצבים ותהליך | מקום לשינוי" },
+      { title: "טיפול בהיפנוזה — מצבים ותהליך | מקום לשינוי, בנימינה" },
       {
         name: "description",
         content:
-          "מהי היפנוזה, איך נראה התהליך הטיפולי, ומצבים רפואיים ונפשיים בהם ניתן לטפל בהיפנוזה — כאב, שינה, עיכול, חרדה ועוד.",
+          "מהי היפנוזה, איך נראה התהליך הטיפולי, ומצבים רפואיים ונפשיים בהם ניתן לטפל בהיפנוזה — כאב, שינה, עיכול, חרדה ועוד. היפנוזה רפואית בבנימינה ופרדס חנה.",
       },
       { property: "og:title", content: "על הטיפול בהיפנוזה — מצבים ותהליך | מקום לשינוי" },
       {
@@ -29,10 +30,12 @@ export const Route = createFileRoute("/treatment")({
         content: "התהליך הטיפולי במרפאה ורשימת מצבים בהם ניתן לטפל בהיפנוזה, עם הפניות למחקרים.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:url", content: `${SITE_URL}/treatment` },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:image", content: painImg.url },
-      { name: "twitter:image", content: painImg.url },
+      { property: "og:image", content: SITE_URL + painImg.url },
+      { name: "twitter:image", content: SITE_URL + painImg.url },
     ],
+    links: [{ rel: "canonical", href: `${SITE_URL}/treatment` }],
   }),
   component: TreatmentPage,
 });

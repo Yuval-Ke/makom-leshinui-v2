@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/accordion";
 import { Reveal } from "@/components/site/Reveal";
 import { PageHeader, SiteLayout } from "@/components/site/SiteLayout";
+import { SITE_URL } from "@/lib/site";
 
 const faqs: { q: string; a: React.ReactNode[] }[] = [
   {
@@ -69,7 +70,7 @@ export const Route = createFileRoute("/faq")({
       {
         name: "description",
         content:
-          "האם היפנוזה מתאימה לי, האם היא מסוכנת, כמה זמן אורך טיפול ומה ההבדל בין היפנוזה ל-NLP — תשובות מהמרפאה.",
+          "האם היפנוזה מתאימה לי, האם היא מסוכנת, כמה זמן אורך טיפול ומה ההבדל בין היפנוזה ל-NLP — תשובות מהמרפאה להיפנוזה בבנימינה.",
       },
       { property: "og:title", content: "שאלות נפוצות על טיפול בהיפנוזה | מקום לשינוי" },
       {
@@ -77,8 +78,10 @@ export const Route = createFileRoute("/faq")({
         content: "תשובות לשאלות הנפוצות ביותר על טראנס היפנוטי, בטיחות, שליטה ומשך הטיפול.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: `${SITE_URL}/faq` },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: `${SITE_URL}/faq` }],
   }),
   component: FaqPage,
 });

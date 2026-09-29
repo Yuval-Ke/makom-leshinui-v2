@@ -26,6 +26,7 @@ Branch: `p1-lovable-migration`. נקודת חזרה: tag `v1-nextjs-old` על `f
 | P3.4 | שינוי השם ל-makom-leshinui | https://makom-leshinui.netlify.app מחזיר 200 | ✅ כל 5 העמודים = 200 |
 | P3.5 | מחיקת האתרים הישנים (ע"י הבעלים) | `netlify sites:list` מראה רק את makom-leshinui | ✅ הבעלים מחק. הכתובות הישנות מחזירות 404 |
 | P3.6 | סקיל מדריך (מקומי) | הסקיל קיים ב-`HYPNOSITE-V2/.claude/skills/` | ✅ |
+| P4.1 | SEO (אושר ע"י הבעלים, 2026-09-29) | "קיסרי" לא מופיע ב-meta; canonical, `og:url` ו-`og:image` מוחלטים; `sitemap.xml` + שורה ב-robots; JSON-LD `MedicalBusiness` (בלי שם אישי); "בנימינה · פרדס חנה" בפוטר ובצור קשר; CSS זהה ל-Lovable | ✅ קו הבסיס של ה-HTML רוענן אחרי שנבדק שה-body שונה רק בטקסט המיקום. ה-alt של התמונה ("ד״ר יובל קיסרי") והמייל נשארו לבקשת הבעלים. הדומיין ב-`src/lib/site.ts` |
 
 ## חבילת רגרסיה (תוצאה מצופה)
 **מקומית, אחרי כל חלק (זולה ודטרמיניסטית):**

@@ -1,5 +1,7 @@
 // Design-freeze guard: the built site must match the live Lovable site
 // (scripts/baseline/, captured 2026-09-28 from mind-unwind-journey.lovable.app).
+// 2026-09-29: HTML baseline refreshed after the owner-approved SEO pass (head tags + location text only;
+// styles.css is still the Lovable original).
 // Run after `npm run build`. Exits 1 on any mismatch. Never "fix" src/ to make this pass.
 import { readFileSync, readdirSync, statSync, existsSync } from "node:fs";
 import { join } from "node:path";

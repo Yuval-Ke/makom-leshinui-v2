@@ -4,26 +4,45 @@ import { ArrowLeft } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import hero from "@/assets/background.jpg.asset.json";
+import { SITE_URL } from "@/lib/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "מקום לשינוי — מרפאה להיפנוזה רפואית" },
+      { title: "היפנוזה בבנימינה ופרדס חנה | מקום לשינוי — מרפאה להיפנוזה רפואית" },
       {
         name: "description",
         content:
-          "מרפאה להיפנוזה בהובלת ד\"ר יובל קיסרי, רופא ובעל רשיון משרד הבריאות. טיפול בכאב כרוני, הפרעות שינה, חרדה, עישון ועוד.",
+          "מרפאה להיפנוזה בבנימינה, לתושבי פרדס חנה והסביבה. טיפול בהיפנוזה על ידי רופא (MD) בעל רשיון משרד הבריאות: כאב כרוני, הפרעות שינה, חרדה, הפסקת עישון ועוד.",
       },
-      { property: "og:title", content: "מקום לשינוי — מרפאה להיפנוזה רפואית" },
+      { property: "og:title", content: "היפנוזה בבנימינה ופרדס חנה | מקום לשינוי" },
       {
         property: "og:description",
         content: "טיפול בהיפנוזה על ידי רופא בעל רשיון משרד הבריאות: כאב, שינה, חרדה, עישון והפרעות עיכול.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: `${SITE_URL}/` },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:image", content: hero.url },
-      { name: "twitter:image", content: hero.url },
+      { property: "og:image", content: SITE_URL + hero.url },
+      { name: "twitter:image", content: SITE_URL + hero.url },
+      {
+        "script:ld+json": {
+          "@context": "https://schema.org",
+          "@type": "MedicalBusiness",
+          name: "מקום לשינוי",
+          description: "מרפאה להיפנוזה על ידי רופא בעל רשיון משרד הבריאות.",
+          url: `${SITE_URL}/`,
+          image: SITE_URL + hero.url,
+          telephone: "+972-52-6903605",
+          address: { "@type": "PostalAddress", addressLocality: "בנימינה", addressCountry: "IL" },
+          areaServed: [
+            { "@type": "City", name: "בנימינה" },
+            { "@type": "City", name: "פרדס חנה" },
+          ],
+        },
+      },
     ],
+    links: [{ rel: "canonical", href: `${SITE_URL}/` }],
   }),
   component: Index,
 });
