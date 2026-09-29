@@ -38,7 +38,7 @@ function AboutPage() {
           <Reveal>
             <img
               src={therapist.url}
-              alt="ד״ר יובל קיסרי"
+              alt="רופא ומטפל בהיפנוזה"
               className="w-full rounded-2xl border border-border object-cover"
             />
           </Reveal>
