@@ -78,6 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "היפנוזה בבנימינה ופרדס חנה | מקום לשינוי" },
+      { name: "google-site-verification", content: "aeujnPyAQOAM_GUvZpyhDwjaWEW58x2_oM5xiD6ihxQ" },
       { name: "description", content: "מרפאה להיפנוזה בבנימינה, לתושבי פרדס חנה והסביבה. טיפול בהיפנוזה על ידי רופא בעל רשיון משרד הבריאות." },
       { property: "og:title", content: "היפנוזה בבנימינה ופרדס חנה | מקום לשינוי" },
       { property: "og:description", content: "טיפול בהיפנוזה על ידי רופא בעל רשיון משרד הבריאות, בבנימינה ופרדס חנה." },
